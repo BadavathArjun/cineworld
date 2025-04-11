@@ -1,4 +1,4 @@
-# MovieDB - A Modern Movie Discovery Platform
+# Cine World - A Modern Movie Discovery Platform
 
 ![MovieDB Banner](https://i.imgur.com/JqYeZ0l.png)
 
@@ -14,8 +14,7 @@
 - [License](#license)
 
 ## Project Overview
-
-MovieDB is a responsive web application built with React that allows users to discover, explore, and save their favorite movies. Leveraging the TMDB (The Movie Database) API, the platform provides comprehensive movie information including details, cast, trailers, and recommendations.
+cineworld is a responsive web application built with React that allows users to discover, explore, and save their favorite movies. Leveraging the TMDB (The Movie Database) API, the platform provides comprehensive movie information including details, cast, trailers, and recommendations.
 
 The application features a modern UI with intuitive navigation, personalized recommendations, and robust search functionality, offering cinema enthusiasts an immersive movie discovery experience.
 
@@ -85,8 +84,8 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/moviedb.git
-   cd moviedb
+   git clone https://github.com/BadavathArjun/cineworld.git
+   cd cineworld
    ```
 
 2. **Install dependencies**
@@ -139,13 +138,16 @@ moviedb/
 
 ## Screenshots
 
-![Home Page](https://i.imgur.com/example1.png)
+![Home Page]![image](https://github.com/user-attachments/assets/6546d6cf-a613-4a81-83f1-b0c56c4d771a)
+
 *Home page featuring trending movies*
 
-![Movie Details](https://i.imgur.com/example2.png)
+![Movie Details]![image](https://github.com/user-attachments/assets/fa4d5845-b6b4-467b-8987-43a4ffeba9cc)
+
 *Detailed movie view with cast information*
 
-![Search Results](https://i.imgur.com/example3.png)
+![Search Results]![image](https://github.com/user-attachments/assets/c6ee8859-91a7-41dd-8d7e-ada98d1a0b39)
+
 *Search functionality with filters*
 
 ## Contributing
@@ -166,4 +168,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**MovieDB** © 2023 - A React-powered movie discovery platform using TMDB API.
+**cineworld** © 2023 - A React-powered movie discovery platform using TMDB API.
