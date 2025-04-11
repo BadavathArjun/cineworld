@@ -1,6 +1,7 @@
 # Cine World - A Modern Movie Discovery Platform
 
-![MovieDB Banner](https://i.imgur.com/JqYeZ0l.png)
+![cineworld Banner]![image](https://github.com/user-attachments/assets/4b74b077-3a19-47d8-8744-ae0878b3d00b)
+
 
 ## Table of Contents
 - [Project Overview](#project-overview)
