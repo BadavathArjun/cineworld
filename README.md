@@ -115,7 +115,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [Your Name] | [GitHub Profile](https://github.com/yourusername) | [Portfolio](https://yourportfolio.com)
+Made with ❤️ by [Badavath Arjun] | [GitHub Profile](https://github.com/BadavathArjun) | [Portfolio](https://yourportfolio.com)
 
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/cineworld?style=social)](https://github.com/yourusername/cineworld/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yourusername/cineworld?style=social)](https://github.com/yourusername/cineworld/network/members)
