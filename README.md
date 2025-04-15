@@ -122,4 +122,4 @@ Made with ❤️ by [Badavath Arjun] | [GitHub Profile](https://github.com/Badav
 
 ---
 
-**Note:** Remember to replace placeholder images, links, and your personal information with actual content before publishing your README.
+
