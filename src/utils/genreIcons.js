@@ -1,0 +1,41 @@
+import {
+    FaTheaterMasks,
+    FaRunning,
+    FaLaugh,
+    FaGhost,
+    FaHeart,
+    FaFilm,
+    FaRocket,
+    FaChild,
+    FaDragon,
+    FaMusic,
+    FaHistory,
+    FaGlobeAmericas,
+    FaUserSecret,
+    FaSkull,
+    FaTv,
+    FaVideo
+} from 'react-icons/fa';
+
+export const genreIcons = {
+    'Action': FaRunning,
+    'Adventure': FaRocket,
+    'Animation': FaChild,
+    'Comedy': FaLaugh,
+    'Crime': FaUserSecret,
+    'Documentary': FaGlobeAmericas,
+    'Drama': FaTheaterMasks,
+    'Family': FaChild,
+    'Fantasy': FaDragon,
+    'History': FaHistory,
+    'Horror': FaGhost,
+    'Music': FaMusic,
+    'Mystery': FaUserSecret,
+    'Romance': FaHeart,
+    'Science Fiction': FaRocket,
+    'TV Movie': FaTv,
+    'Thriller': FaSkull,
+    'War': FaSkull,
+    'Western': FaGlobeAmericas,
+    'Default': FaFilm
+}; 

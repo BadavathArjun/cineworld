@@ -1,0 +1,420 @@
+.genre-section {
+    padding: 4rem 1rem;
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.95));
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #e50914, transparent);
+}
+
+.genres-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.genres-container::-webkit-scrollbar {
+    display: none;
+}
+
+.genres-scroll {
+    display: inline-flex;
+    gap: 2.5rem;
+    padding: 0 3rem;
+    min-width: min-content;
+}
+
+.genre-card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.genre-card:hover {
+    transform: translateY(-15px) scale(1.05) rotateY(5deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.genre-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.genre-card:hover .genre-overlay {
+    opacity: 0.4;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.genre-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    gap: 0.8rem;
+}
+
+.genre-icon {
+    font-size: 3rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transform: translateZ(30px);
+}
+
+.genre-card:hover .genre-icon {
+    transform: scale(1.2) translateZ(40px);
+    opacity: 1;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+.genre-name {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateZ(20px);
+    max-width: 90%;
+    overflow-wrap: break-word;
+    line-height: 1.3;
+}
+
+.genre-card:hover .genre-name {
+    transform: translateZ(30px);
+}
+
+.genre-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.genre-card:hover .genre-arrow {
+    opacity: 1;
+    transform: translateX(0);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.genre-hover-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.genre-card:hover .genre-hover-effect {
+    opacity: 0.6;
+}
+
+.genre-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.genre-card:hover .particle {
+    opacity: 0.6;
+    animation: float 3s infinite ease-in-out;
+}
+
+.genre-card:hover .particle:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    width: 4px;
+    height: 4px;
+    animation-delay: 0.1s;
+}
+
+.genre-card:hover .particle:nth-child(2) {
+    top: 60%;
+    left: 30%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 0.3s;
+}
+
+.genre-card:hover .particle:nth-child(3) {
+    top: 30%;
+    left: 70%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 0.2s;
+}
+
+.genre-card:hover .particle:nth-child(4) {
+    top: 70%;
+    left: 60%;
+    width: 3px;
+    height: 3px;
+    animation-delay: 0.4s;
+}
+
+.genre-card:hover .particle:nth-child(5) {
+    top: 40%;
+    left: 40%;
+    width: 7px;
+    height: 7px;
+    animation-delay: 0s;
+}
+
+.genre-card:hover .particle:nth-child(6) {
+    top: 80%;
+    left: 20%;
+    width: 4px;
+    height: 4px;
+    animation-delay: 0.5s;
+}
+
+.genre-card:hover .particle:nth-child(7) {
+    top: 20%;
+    left: 80%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 0.3s;
+}
+
+.genre-card:hover .particle:nth-child(8) {
+    top: 60%;
+    left: 70%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 0.2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-15px) translateX(5px);
+    }
+}
+
+.genre-sparkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.genre-card:hover .sparkle {
+    opacity: 1;
+    animation: sparkle 1.5s infinite;
+}
+
+.genre-card:hover .sparkle:nth-child(1) {
+    top: 15%;
+    left: 15%;
+    animation-delay: 0.1s;
+}
+
+.genre-card:hover .sparkle:nth-child(2) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 0.3s;
+}
+
+.genre-card:hover .sparkle:nth-child(3) {
+    bottom: 15%;
+    left: 15%;
+    animation-delay: 0.5s;
+}
+
+.genre-card:hover .sparkle:nth-child(4) {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 0.2s;
+}
+
+.genre-card:hover .sparkle:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0.4s;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .genre-card {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .genre-icon {
+        font-size: 2.8rem;
+    }
+    
+    .genre-name {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .genre-section {
+        padding: 3rem 0.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .genre-card {
+        width: 140px;
+        height: 140px;
+        border-radius: 18px;
+    }
+
+    .genre-icon {
+        font-size: 2.5rem;
+    }
+
+    .genre-name {
+        font-size: 1rem;
+    }
+
+    .genres-scroll {
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-section {
+        padding: 2rem 0.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .genre-card {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+    }
+
+    .genre-icon {
+        font-size: 2rem;
+    }
+
+    .genre-name {
+        font-size: 0.9rem;
+    }
+
+    .genres-scroll {
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .genre-arrow {
+        width: 25px;
+        height: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+}

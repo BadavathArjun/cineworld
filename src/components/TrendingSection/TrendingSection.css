@@ -1,0 +1,85 @@
+.trending-section {
+    padding: 2rem 0;
+    background: linear-gradient(to bottom, #0f0f1a, #1a1a2e);
+}
+
+.trending-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.trending-header .section-title {
+    margin: 0;
+    padding: 0;
+}
+
+.trending-tabs {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-button svg {
+    font-size: 1.1rem;
+}
+
+.tab-button:hover {
+    color: #fff;
+}
+
+.tab-button.active {
+    background: #e50914;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .trending-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 0 1.5rem;
+    }
+
+    .trending-tabs {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab-button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .trending-header {
+        padding: 0 1rem;
+    }
+
+    .tab-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-button svg {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,312 @@
+.genre-section {
+    padding: 2rem 0;
+    background: #0f0f1a;
+    overflow: hidden;
+    margin-top: -2rem;
+}
+
+.genre-heading {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 2rem 1.5rem;
+    padding: 0;
+}
+
+.genre-list {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.genre-list::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.genre-card {
+    min-width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.genre-card:hover {
+    transform: translateY(-5px);
+}
+
+.genre-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.genre-explore {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5px;
+}
+
+.genre-explore::after {
+    content: ' →';
+    opacity: 0.8;
+}
+
+/* Vibrant color scheme matching the screenshot */
+.genre-card:nth-child(1) {
+    background: #f57c00;
+    /* Orange for Action */
+}
+
+.genre-card:nth-child(2) {
+    background: #d81b60;
+    /* Pink for Adventure */
+}
+
+.genre-card:nth-child(3) {
+    background: #8e24aa;
+    /* Purple for Animation */
+}
+
+.genre-card:nth-child(4) {
+    background: #5e35b1;
+    /* Deep Purple for Comedy */
+}
+
+.genre-card:nth-child(5) {
+    background: #3949ab;
+    /* Indigo for Crime */
+}
+
+.genre-card:nth-child(6) {
+    background: #1e88e5;
+    /* Blue for Documentary */
+}
+
+.genre-card:nth-child(7) {
+    background: #039be5;
+    /* Light Blue for Drama */
+}
+
+.genre-card:nth-child(8) {
+    background: #00acc1;
+    /* Cyan for Family */
+}
+
+.genre-card:nth-child(9) {
+    background: #00897b;
+    /* Teal for Fantasy */
+}
+
+.genre-card:nth-child(10) {
+    background: #43a047;
+    /* Green for History */
+}
+
+.genre-card:nth-child(11) {
+    background: #7cb342;
+    /* Light Green for Horror */
+}
+
+.genre-card:nth-child(12) {
+    background: #c0ca33;
+    /* Lime for Music */
+}
+
+.genre-card:nth-child(13) {
+    background: #fdd835;
+    /* Yellow for Mystery */
+}
+
+.genre-card:nth-child(14) {
+    background: #fb8c00;
+    /* Orange for Romance */
+}
+
+.genre-card:nth-child(15) {
+    background: #f4511e;
+    /* Deep Orange for Sci-Fi */
+}
+
+.genre-card:nth-child(16) {
+    background: #6d4c41;
+    /* Brown for TV Movie */
+}
+
+.genre-card:nth-child(17) {
+    background: #757575;
+    /* Grey for Thriller */
+}
+
+.genre-card:nth-child(18) {
+    background: #546e7a;
+    /* Blue Grey for War */
+}
+
+.genre-movies {
+    max-width: 1400px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+}
+
+.genre-movies h2 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.no-poster {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.no-poster svg {
+    font-size: 1.75rem;
+}
+
+.movie-info {
+    padding: 0.75rem;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top-color: #00BCD4;
+    animation: spin 1s ease-in-out infinite;
+    margin: 2rem auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .genre-heading {
+        font-size: 1.5rem;
+        margin: 0 1.5rem 1.25rem;
+    }
+
+    .genre-card {
+        min-width: 110px;
+        height: 110px;
+    }
+
+    .genre-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .genre-explore {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .genre-section {
+        padding: 1.5rem 0;
+    }
+
+    .genre-heading {
+        font-size: 1.25rem;
+        margin: 0 1rem 1rem;
+    }
+
+    .genre-list {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .genre-card {
+        min-width: 100px;
+        height: 100px;
+    }
+
+    .genre-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .genre-explore {
+        font-size: 0.75rem;
+    }
+}

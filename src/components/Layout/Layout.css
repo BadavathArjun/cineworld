@@ -1,0 +1,15 @@
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+}
+
+.page-content {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
